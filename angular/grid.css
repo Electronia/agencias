@@ -1,0 +1,153 @@
+#mainContainer
+{
+    margin:0 auto 0 auto;
+    padding: 0 auto 0 auto;
+    border: 0px solid blue;
+    min-height:500px;
+    height:auto;
+    background-color: #F6F6F6;
+}
+#subMainContainer
+{
+    margin:0 auto 0 auto;
+    padding: 0 auto 0 auto;
+    padding-top:85px;
+    border: 0px solid red;
+    width:1205px;
+    min-height:500px;
+    height:auto;
+    overflow: hidden;
+}
+
+.navegadores 
+{
+    border:0px solid black;
+    padding-left:5px;
+}
+
+.navegadores li
+{
+    list-style: none outside none;
+    height: 18px;
+    }
+
+#listadoContainerMain {
+    border:0px solid red;
+    width:1200px;
+    vertical-align: top;
+}
+#listadoContainerMain #menusNavigatorContainer{
+    display:inline-block;
+    border:0px solid blue;
+    width:175px;
+    vertical-align: top;
+}
+
+#menusNavigatorContainer .boxContainer ul{
+
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 5px 0 0 3px;
+    
+}
+
+#menusNavigatorContainer .boxContainer li{
+
+    margin: 3px 0 0 0;
+    
+}
+#menusNavigatorContainer .boxContainer li a{
+
+    font-size:13px;
+    font-weight:normal;
+    
+}
+#listadoContainerMain #grillaMainContainer{
+    display:inline-block;
+    border:0px solid green;
+ }
+
+
+
+/***********************************************************************************************/
+#grillaMainContainer{
+    border:0px solid #CCC;
+    width:990px;
+
+}
+#grillaMainContainer ul
+{
+    list-style: none;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+    
+}
+#grillaMainContainer li a{
+    text-decoration:none;
+}
+#grillaMainContainer li{
+    border-right: 1px  dashed #dedede;
+    border-bottom: 1px dashed #dedede;
+    float: left;
+    height: auto;
+    position: relative;
+    text-align: center;
+    width: 206px;
+    padding: 1% 2% 1% 2%;
+}
+
+#grillaMainContainer .grillaImagen{
+    width:202px;
+    height:150px;
+    border: 1px solid #F1F1F1;
+    margin:1px;
+}
+#grillaMainContainer .grillaInfo{
+    border:0px solid blue;
+    width:200px;
+    height:60px;
+    
+}
+#grillaMainContainer p{
+    text-align:left;
+}
+#grillaMainContainer .grillaTitle{
+    font-size:14px;
+    font-weight:bold;
+    color:#000;
+    margin:1px;
+}
+#grillaMainContainer .grillaPrecio{
+    font-size:15px;
+    font-weight:bold;
+    color:#CC0000;
+    margin:1px;
+}
+#grillaMainContainer .grillaEstado{
+    font-size:12px;
+    color:#666;
+    margin:1px;
+}
+
+#listadoPublicidadSky{
+    width:200px;
+    height:350px;
+}
+
+.listadoTitleSearch{
+    
+    border:0px solid red;
+    width:920px;
+    margin-left:200px;
+    margin-top: -25px;
+    padding:0px;
+}
+.listadoTitleSearch h2{
+    font-size:16px;
+}
+
+.listadoTitleSearch h2 span{
+    font-size: 15px;
+    font-weight:normal;
+    color:#666;
+}

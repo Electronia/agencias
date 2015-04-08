@@ -1,0 +1,91 @@
+<!doctype html>
+
+<!-- ASSIGN OUR ANGULAR MODULE -->
+<html ng-app="MainApp">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Ejemplo MEAN</title>
+	<!-- Cargamos bootstrap -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css">
+	<link rel="stylesheet" href="grid.css">
+	<!-- Cargamos angular -->
+	<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular.min.js"></script>
+	<!-- Cargamos el javascript de angular -->
+	<script src="core.js"></script>
+
+</head>
+<body ng-controller="listController">
+	<div class="container" ng-show="listado_uno">
+
+		<div class="jumbotron text-center" ng-prueba>
+			<h1>{{ nickname }} <span class="label label-success">{{ Items.length }}</span></h1>
+		</div>
+
+
+		<div class="row">
+			<div class="col-sm-6 col-sm-offset-1">
+				<table class="table table-striped">
+					<tr class="info">
+						<td>Picture</td>
+						<td>Id</td>
+						<td>Title</td>
+						<td>Estado</td>
+						<td>Precio | Año | Km</td>
+					</tr>
+					<tr ng-repeat="item in Items">
+						<td><img  src="{{item.thumbnail}}" /></td>
+						<td>{{ item.id }}</td>
+						<td>{{ item.title }}</td>
+						<td>{{ item.location.state.name}}</td>
+						<td>{{ item.price }} | {{ searchAttribute(item.attributes,'YEAR') }} | {{ searchAttribute(item.attributes,'KMTS')}}</td>					
+					</tr>
+				</table>					
+			</div>
+			<div class="col-sm-4 col-sm-offset-1 text-center">
+				<input type="text"  class="form-control input-lg text-center" ng-model="cust_id" placeholder="Escribe el cust_id"> 
+				<input type="button" class="btn btn-success btn-lg" ng-click="loadListItems(); getSeller();" value="cargar publicaciones"/>
+				<input type="button" class="btn btn-success btn-lg" ng-click="changeView('1'); getSeller();" value="View Grid"/>
+			</div>
+		</div>
+	</div>
+	<div class="container" ng-show="listado_dos">
+
+		<div id="mainContainer"> 
+        	<div id="subMainContainer">
+        		<h1>{{ nickname }} <span class="label label-success">{{ Items.length }}</span></h1>
+        		<div class="col-sm-4 col-sm-offset-1 text-center">
+				<input type="button" class="btn btn-success btn-lg" ng-click="changeView('2'); getSeller();" value="View Clasic"/>
+				</div>
+        		<div id="listadoContainerMain">
+        			
+
+        			<div id="grillaMainContainer">
+	        			<ul ng-repeat="item in Items">
+	        				<li><a href="{{ item.id }}">
+	        					<div class="grillaImagen">
+	        						<img src="{{item.thumbnail}}" border="0px" width="200px" height="150px"/>
+	        					</div>
+	        					<div class="grillaInfo">
+	        						<p class="grillaTitle">{{ item.title }}</p>
+	        						<p class="grillaPrecio">${{ item.price }} MXN</p>
+	        						<p class="grillaEstado">{{ item.location.state.name}}</p>
+	        						<p class="grillaData"> {{ searchAttribute(item.attributes,'YEAR') }} | {{ searchAttribute(item.attributes,'KMTS')}}</p>
+	        					</div>
+	        					</a>
+	        				</li>
+	        			</ul>
+        			</div>
+
+
+        		</div>
+        	</div>
+        </div>
+
+
+		
+	</div>
+
+
+</body>
+</html>
